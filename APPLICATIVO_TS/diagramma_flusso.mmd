@@ -1,0 +1,10 @@
+flowchart TD
+  A([Inizio]) --> B[Inserisci nome, biglietti, orario]
+  B --> C{biglietti > 6?}
+  C -- Sì --> E1[/"Numero massimo di biglietti superato"/]
+  C -- No --> D{orario valido?}
+  D -- No --> E2[/"Spettacolo non disponibile"/]
+  D -- Sì --> F[/"Prenotazione confermata"/]
+  E1 --> Z([Fine])
+  E2 --> Z
+  F --> Z
